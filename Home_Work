@@ -1,0 +1,27 @@
+// 1 задачка: : Задайте значения M и N. Напишите программу, которая выведет все натуральные числа 
+// в промежутке от M до N. Использовать рекурсию, не использовать циклы.
+
+
+
+int num = new Random().Next(1, 10);
+Console.WriteLine("Число N = " + num);
+
+int firstElement = new Random().Next(1, 10);
+Console.WriteLine("Число M = " + firstElement);
+
+PrintNumbers(firstElement, num);
+
+void PrintNumbers(int startEl, int endEl)
+{
+    Console.WriteLine(startEl);
+
+    if (startEl == endEl)
+    {
+        return;
+    }
+    PrintNumbers(startEl + 1, endEl);
+}
+
+
+
+
